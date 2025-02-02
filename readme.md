@@ -17,24 +17,22 @@ Ensure you have Python installed on your system.
    ```sh
    git clone https://github.com/yourusername/repository-name.git
    cd repository-name
-Install required dependencies (if any):
-sh
-Copy
-Edit
-pip install -r requirements.txt
-(Currently, no additional dependencies are required.)
-Usage
+   ```
+
+2. Install required dependencies (if any):
+   ```sh
+   pip install -r requirements.txt
+   ```
+   *(Currently, no additional dependencies are required.)*
+
+## Usage
 Run the script:
+   ```sh
+   python user.py
+   ```
 
-sh
-Copy
-Edit
-python user.py
 Follow the on-screen menu options:
-
-sql
-Copy
-Edit
+```
 Enter the option:
     1. Create table
     2. Dump user from CSV file into user table
@@ -46,19 +44,22 @@ Enter the option:
     8. Delete a user by ID from the user table
     9. Update user by ID from the user table
     10. Exit
-Sample CSV File
-Make sure you have a CSV file named sample_users.csv in the same directory, structured like this:
+```
 
+## Sample CSV File
+Make sure you have a CSV file named `sample_users.csv` in the same directory, structured like this:
+```
 first_name,last_name,company_name,address,city,county,state,zip,phone1,phone2,email,web
 John,Doe,CompanyX,123 Street,New York,NY,NY,10001,1234567890,0987654321,john.doe@example.com,www.example.com
 Jane,Smith,CompanyY,456 Avenue,Los Angeles,CA,CA,90001,2345678901,,jane.smith@example.com,www.companyy.com
+```
 
-Notes
-    1. The database file (user.sqlite3) is created automatically.
-    2. Make sure sample_users.csv is properly formatted before importing users.
-License
-    **This project is open-source and available under the MIT License.**
+## Notes
+1. The database file (`user.sqlite3`) is created automatically.
+2. Make sure `sample_users.csv` is properly formatted before importing users.
 
-Author
-    
-Replace `"yourusername/repository-name"` with your actual GitHub username and repository name. Would you like any modifications? 🚀
+## License 
+**This project is open-source and available under the MIT License.**
+
+## Author
+[Your Name](https://github.com/yourusername)
