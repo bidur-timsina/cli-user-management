@@ -49,23 +49,16 @@ Enter the option:
 Sample CSV File
 Make sure you have a CSV file named sample_users.csv in the same directory, structured like this:
 
-perl
-Copy
-Edit
 first_name,last_name,company_name,address,city,county,state,zip,phone1,phone2,email,web
 John,Doe,CompanyX,123 Street,New York,NY,NY,10001,1234567890,0987654321,john.doe@example.com,www.example.com
 Jane,Smith,CompanyY,456 Avenue,Los Angeles,CA,CA,90001,2345678901,,jane.smith@example.com,www.companyy.com
+
 Notes
-The database file (user.sqlite3) is created automatically.
-Make sure sample_users.csv is properly formatted before importing users.
+    1. The database file (user.sqlite3) is created automatically.
+    2. Make sure sample_users.csv is properly formatted before importing users.
 License
-This project is open-source and available under the MIT License.
+    **This project is open-source and available under the MIT License.**
 
 Author
-Your Name
-
-pgsql
-Copy
-Edit
-
+    
 Replace `"yourusername/repository-name"` with your actual GitHub username and repository name. Would you like any modifications? 🚀
