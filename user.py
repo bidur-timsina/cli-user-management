@@ -19,7 +19,71 @@ Enter the option:
     5. Query user by id from user table
     6. Query specified no. of user from user table
     7. Delete all user from user table
-    8. Delete user by id from user table
+    8. Delete user by id from user table```python
+def main():
+    con = create_connection()
+    while True:
+        user_input = input(INPUT_STRING)
+        if user_input == "1":
+            create_table(con)
+        elif user_input == "2":
+            users = read_csv()
+            insert_users(con, users)
+        elif user_input == "3":
+            first_name = input("Enter first name: ")
+            last_name = input("Enter last name: ")
+            company_name = input("Enter company name: ")
+            address = input("Enter address: ")
+            city = input("Enter city: ")
+            county = input("Enter county: ")
+            state = input("Enter state: ")
+            zip = input("Enter zip: ")
+            phone1 = input("Enter phone1: ")
+            phone2 = input("Enter phone2: ")
+            email = input("Enter email: ")
+            web = input("Enter web: ")
+            add_user_by_id(con, first_name, last_name, company_name, address, city, county, state, zip, phone1, phone2, email, web)
+        elif user_input == "4":
+            select_users(con)
+        elif user_input == "5":
+            user_id = input("Enter user id: ")
+            select_user_by_id(con, user_id)
+        elif user_input == "6":
+            no_of_user = input("Enter number of user: ")
+            if no_of_user.isdigit():
+                select_specified_users(con, int(no_of_user))
+        elif user_input == "7":
+            conformation = input("Are you sure you want to delete all user? (yes/no): ")
+            if conformation.lower() == "yes":
+                delete_user(con)
+        elif user_input == "8":
+            user_id = input("Enter user id: ")
+            delete_user_by_id(con, user_id)
+        elif user_input == "9":
+            user_id = input("Enter user id: ")
+            first_name = input("Enter first name: ")
+            last_name = input("Enter last name: ")
+            company_name = input("Enter company name: ")
+            address = input("Enter address: ")
+            city = input("Enter city: ")
+            county = input("Enter county: ")
+            state = input("Enter state: ")
+            zip = input("Enter zip: ")
+            phone1 = input("Enter phone1: ")
+            phone2 = input("Enter phone2: ")
+            email = input("Enter email: ")
+            web = input("Enter web: ")
+            cur = con.cursor()
+            cur.execute("UPDATE user SET first_name = ?, last_name = ?, company_name = ?, address = ?, city = ?, county = ?, state = ?, zip = ?, phone1 = ?, phone2 = ?, email = ?, web = ? WHERE id = ?", 
+                        (first_name, last_name, company_name, address, city, county, state, zip, phone1, phone2, email, web, user_id))
+            con.commit()
+            print("User updated successfully.")
+        elif user_input == "10":
+            exit_program(con)
+            break
+        else:
+            print("Invalid option. Please choose a valid option.")
+```
     9. Update user by id from user table
     10. Exit
 """
