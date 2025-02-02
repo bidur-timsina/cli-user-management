@@ -61,5 +61,3 @@ Jane,Smith,CompanyY,456 Avenue,Los Angeles,CA,CA,90001,2345678901,,jane.smith@ex
 ## License 
 **This project is open-source and available under the MIT License.**
 
-## Author
-[Your Name](https://github.com/yourusername)
